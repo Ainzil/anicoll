@@ -7,6 +7,9 @@ Running codaIm.py will produce all figures in the CODA model chapter of the repo
 Additional it produces a gif (avgdis.gif) of the final configurations that were computed in the making of figure 3.5. This allows you to see how the final configurations change as you move along the curve we consder in equation (3.3.3).
 codaIm may take a few minutes to produce all figures. Figures  3.4-3.5 in particular take a couple minutes to produce each.
 
+Additionally running coda_gif.py produces gifs of the evolution of the histograms of configurations in the various extreme regimes presented in figure 3.3. 
+These are written as disagreement_hist.gif, agreement_hist.gif, negative_hist.gif, positive_hist.gif.
+
 
 Extra Notes on Functions:
 

@@ -10,10 +10,11 @@ Our first model of opinion dynamics is the threshold voter model \cite{Vieira_20
 	c(x,\eta)=\begin{cases}
 		1, & \text{if}\quad \lvert\{y\in V(x)\mid \eta(x)\ne\eta(y)\}\rvert\ge T\\
 		0, & \text{otherwise}
-		\end{cases}.
+		\end{cases},
 	\ee
+	for all \(x\in V\).
 	Instead of dealing with this continuous time Markov process directly, it is common to take the discrete time Markov process underlying it.	
-	In this paper we will be taking this underlying discrete time Markov process to be the threshold voter model.
+	In this paper we will call this underlying discrete time Markov process the threshold voter model.
 \begin{comment}
 	The threshold voter model is a discrete time Markov process with configuration space \(C=\{0,1\}^{\lvert V\rvert}\).
 	Note if \(\eta\in C\) then \(\eta\) is a \(\lvert V\rvert\) length vector whose entries are indexed by \(V\), we will write \(\eta(x)\) with \(x\in V\) for the component corresponding to the \(x\) index.
@@ -57,7 +58,7 @@ We will verify this theorem and explore what happens for \(T\le 2\) via an imple
 Our implementation will be on a lattice defined similarly to \cref{def:lattice} however due to hardware constraints we are unable to simulate an infinite lattice and instead consider the lattice on the torus, i.e we have a finite \(N\times M\) integer lattice and connect the boundaries, so the vertex \((x,0)\) will be connected to \((x,M-1)\) for all \(x\in\{0,\dots  N-1\}\) and the vertex \((0,y)\) will be connected to \((N-1,y)\) for all \(y\in\{0,\dots, M-1\}\).
 To choose our initial conditions we uniformly sample a configuration from the configuration space, this will provide us with a noisy initial condition, good for seeing what the generic dynamics are. 
 
-We experimentally find that for \(T\ge 2\) process will always end up in a stationary state.
+We experimentally find that for \(T\ge 2\) the process will always end up in a stationary state.
 We briefly discuss the difference between the dynamics in the \(T=2,3\) cases.
 
 For \(T=3\) we observe that the dynamics are `sticky'.
